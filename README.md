@@ -1,10 +1,10 @@
 # 🚖 NYC Taxi Analytics: Medallion Data Pipeline
 
-## 📖 Overview
+## Overview
 This project implements an end-to-end data pipeline using the **Medallion Architecture** (Bronze, Silver, Gold) to process NYC Yellow Taxi trip data. The pipeline ingests raw Parquet data into MySQL, cleanses and validates it, and prepares it for downstream analytical modeling.
 
-## 🏗️ The Medallion Architecture: What Problem Does It Solve?
-In traditional data engineering, raw data is often transformed all at once before being loaded into a warehouse (ETL). This approach frequently leads to **"spaghetti architecture"**—a tangled mess of scripts where a failure at any single step breaks the entire pipeline. 
+## The Medallion Architecture: What Problem Does It Solve?
+In traditional data engineering, raw data is often transformed all at once before being loaded into a warehouse (ETL). This approach frequently leads to **"spaghetti architecture"** a tangled mess of scripts where a failure at any single step breaks the entire pipeline. 
 
 The Medallion Architecture solves this by introducing **incremental data quality layers**. It establishes a single source of truth by progressively improving data quality as it moves through three distinct stages:
 
