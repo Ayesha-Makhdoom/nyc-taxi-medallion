@@ -64,17 +64,20 @@ nyc-taxi-medallion/
     └── explore_data.py       # Interactive EDA and profiling
 
     
-🚀 Getting Started
-1. Prerequisites
+```
+## 🚀 Getting Started
+
+### 1. Prerequisites
 Ensure you have MySQL installed and running locally.
 
-2. Installation
+### 2. Installation
 Clone the repository and install the required packages:
 
-bash
-git clone https://github.com/yourusername/nyc-taxi-medallion.git
+```bash
+git clone https://github.com/Ayesha-Makhdoom/nyc-taxi-medallion.git
 cd nyc-taxi-medallion
 pip install -r requirements.txt
+
 3. Database Setup
 Execute the schema script to create the tables:
 
@@ -106,3 +109,12 @@ python -m src.bronze_ingest
 python -m src.silver_transform
 Disclaimer: This project uses publicly available data from the NYC TLC Trip Record Data.
 
+text
+
+### Push to GitHub:
+Save the file. Then run this in your terminal:
+
+```bash
+git add README.md
+git commit -m "Fix markdown backticks"
+git push origin main
