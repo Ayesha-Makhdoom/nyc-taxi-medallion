@@ -73,48 +73,38 @@ Ensure you have MySQL installed and running locally.
 ### 2. Installation
 Clone the repository and install the required packages:
 
-```bash
-git clone https://github.com/Ayesha-Makhdoom/nyc-taxi-medallion.git
-cd nyc-taxi-medallion
-pip install -r requirements.txt
+    git clone https://github.com/Ayesha-Makhdoom/nyc-taxi-medallion.git
+    cd nyc-taxi-medallion
+    pip install -r requirements.txt
 
-3. Database Setup
+### 3. Database Setup
 Execute the schema script to create the tables:
 
-bash
-mysql -u root -p < sql/schema.sql
-4. Environment Variables
+    mysql -u root -p < sql/schema.sql
+
+### 4. Environment Variables
 This project uses environment variables to keep credentials secure. Set them in your terminal before running the scripts:
 
-Windows (Command Prompt):
+**Windows (Command Prompt):**
 
-cmd
-set MYSQL_USER=root
-set MYSQL_PASSWORD=your_password
-set MYSQL_DB=nyc_taxi_analytics
-Mac/Linux:
+    set MYSQL_USER=root
+    set MYSQL_PASSWORD=your_password
+    set MYSQL_DB=nyc_taxi_analytics
 
-bash
-export MYSQL_USER=root
-export MYSQL_PASSWORD=your_password
-export MYSQL_DB=nyc_taxi_analytics
-5. Run the Pipeline
+**Mac/Linux:**
+
+    export MYSQL_USER=root
+    export MYSQL_PASSWORD=your_password
+    export MYSQL_DB=nyc_taxi_analytics
+
+### 5. Run the Pipeline
 Execute the ingestion and transformation scripts sequentially:
 
-bash
-# 1. Load raw data into Bronze
-python -m src.bronze_ingest
+    # 1. Load raw data into Bronze
+    python -m src.bronze_ingest
 
-# 2. Cleanse data into Silver
-python -m src.silver_transform
-Disclaimer: This project uses publicly available data from the NYC TLC Trip Record Data.
+    # 2. Cleanse data into Silver
+    python -m src.silver_transform
 
-text
-
-### Push to GitHub:
-Save the file. Then run this in your terminal:
-
-```bash
-git add README.md
-git commit -m "Fix markdown backticks"
-git push origin main
+---
+*Disclaimer: This project uses publicly available data from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).*
